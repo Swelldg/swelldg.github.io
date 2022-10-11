@@ -109,4 +109,4 @@ const socket = io('https://yourwebsite.com:3120',{transports: ['websocket']});
 //切换域名地址到你的网页，并设置transports模式为'websocket'
 ```
 
-注：一定要在服务端启动socket.io`php start start.php -d`后，才能在前端看到连接成功的输出
+注：一定要在服务端启动socket.io`php start.php start -d`后，才能在前端看到连接成功的输出
