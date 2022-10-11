@@ -19,9 +19,9 @@
 注：此处安装的socket.io-client版本可能会与phpsocket.io不匹配，
 phpsocket.io只适配socket.io >= v1.3.0 或 <= v2.x，请安装合适版本。
 
-##前后端通信连接
+## 前后端通信连接
 
-###后端(server)
+### 后端(server)
 
 phpsocket.io不能通过前端网页的请求调用，只能在命令行内调用，我们需要新建start.php文件，并在命令行内输入
 `php start.php start`，启动通信服务端，后续可加上`-d`参数以DAEMON模式启用。
@@ -44,7 +44,7 @@ $io->on('connection', function($socket){
 
 Worker::runAll();
 ```
-###前端(client)
+### 前端(client)
 
 前端使用socket.io-client
 ```javascript
@@ -58,11 +58,11 @@ socket.on('connect', function (){  //连接成功，调用connect事件，输出
     console.log('connect success');
 });
 ```
-##使用举例(实现一对一或一对多通信)
+## 使用举例(实现一对一或一对多通信)
 
 服务端与客户端都调用on方法定义事件，调用emit方法触发事件
 
-###后端(server)
+### 后端(server)
 ```
  $socket->on('login',function ($user_id)use($socket){ 
        $socket->join($user_id);
@@ -74,7 +74,7 @@ socket.on('connect', function (){  //连接成功，调用connect事件，输出
  });
  //定义inform事件，接受user_id作为参数，触发客户端中，以当前user_id作为组名的小组中的update事件
 ```
-###前端(client)
+### 前端(client)
 ```javascript
 socket.emit('login',user.id); //前端用户成功登录时，触发服务端定义好的login事件，从而完成分组
 
@@ -85,9 +85,9 @@ socket.on('update',function (){ //定义用户端事件update，当服务端触�
 });
 ```
 
-##线上环境使用
+## 线上环境使用
 支持SSL(wss或https)
-###后端(server)
+### 后端(server)
 SSL 要求workerman>=3.3.7 phpsocket.io>=1.1.1
 ```
 $context = array(
@@ -103,7 +103,7 @@ $io = new SocketIO(3120,$context);
 //定义接口后加上ssl参数
 ```
 
-###前端(client)
+### 前端(client)
 ```javascript
 const socket = io('https://yourwebsite.com:3120',{transports: ['websocket']});
 //切换域名地址到你的网页，并设置transports模式为'websocket'
