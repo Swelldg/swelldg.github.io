@@ -25,7 +25,7 @@ Ant Design作为基于React的前端组件库集成好了modal这么一个对话
     })}                      
 }></button>  //PopModal为完全受控组件，本身不具备任何数据
 ```
-###具体实现
+### 具体实现
 PopModal.js
 ```jsx
 import React from "react";
