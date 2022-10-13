@@ -2,4 +2,4 @@
 
 ### [基于PHPSocket.io实现前后端通信(React+Laravel)](/phpsocket)
 ### [自定义触发式Modal函数组件(React)](/modal)
-
+### [PHP后端生成二维码](/php-qrcode)
