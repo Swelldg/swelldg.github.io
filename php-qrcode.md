@@ -5,7 +5,7 @@
 ### [PHP-GD extension](https://www.php.net/manual/en/book.image.php)
 
 ## 安装
-`composer require endroid/qr-code`
+```composer require endroid/qr-code```
 
 ## 基本使用举例
 ### 后端
