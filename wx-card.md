@@ -50,7 +50,7 @@ wx.ready(function () {//需在用户可能点击分享按钮前就先调用
         desc: data.name, // 分享描述
         link: data.link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
         imgUrl: data.imgUrl, // 分享图标
-        success: function () {// 设置成功回掉函数
+        success: function () {// 设置成功回调函数
         }
     })
 });
