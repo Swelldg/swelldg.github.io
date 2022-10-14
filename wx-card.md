@@ -57,7 +57,8 @@ wx.ready(function () {//需在用户可能点击分享按钮前就先调用
 ```
 
 ## 后端
-后端要提供给前端相应的微信接口参数  
+后端要提供给前端相应的微信接口参数，首先需要根据微信公众号ID和微信公众号SECRET获取微信的**access_token**，然后根据**access_toekn**获取**jsapi_ticket**，再由**jsapi_ticket**，**nonceStr**，**timeStamp**和**url**合成**encodeStr**，通过sha1签名算法生成最终的**signature**。最后再将需要返回的数据整合，传递给前端。  
+
 注：需要在微信公众号平台中给使用的域名添加白名单
 ### getWechatAccessToken
 ```php
