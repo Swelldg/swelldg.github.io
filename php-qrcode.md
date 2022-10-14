@@ -9,7 +9,7 @@
 
 ## 基本使用举例
 ### 后端
-```
+```php
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Color\Color;
 use Endroid\QrCode\Encoding\Encoding;
@@ -49,7 +49,7 @@ return json_encode($dataUri);  //转化为json编码的string
 使用到的gd库中的函数都可以在官方文档中查询  
 [PHP-GD](https://www.php.net/manual/en/book.image.php)
 ### 后端
-```
+```php
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Color\Color;
 use Endroid\QrCode\Encoding\Encoding;

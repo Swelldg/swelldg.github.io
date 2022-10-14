@@ -3,7 +3,7 @@
 ### [微信网页开发/JS-SDK](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html)
 
 ## 安装SDK
-`npm install weixin-js-sdk`
+```npm install weixin-js-sdk```
 
 ## 前端
 
@@ -56,7 +56,7 @@ wx.ready(function () {//需在用户可能点击分享按钮前就先调用
 });
 ```
 
-##后端
+## 后端
 后端要提供给前端相应的微信接口参数  
 注：需要在微信公众号平台中给使用的域名添加白名单
 ### getWechatAccessToken

@@ -47,7 +47,7 @@ Worker::runAll();
 ### 前端(client)
 
 前端使用socket.io-client
-```javascript
+```jsx
 import io from "socket.io-client";
 
 const socket = io('http://127.0.0.1:3120'); //本地监听3120端口
@@ -63,7 +63,7 @@ socket.on('connect', function (){  //连接成功，调用connect事件，输出
 服务端与客户端都调用on方法定义事件，调用emit方法触发事件
 
 ### 后端(server)
-```
+```php
  $socket->on('login',function ($user_id)use($socket){ 
        $socket->join($user_id);
  });
@@ -75,7 +75,7 @@ socket.on('connect', function (){  //连接成功，调用connect事件，输出
  //定义inform事件，接受user_id作为参数，触发客户端中，以当前user_id作为组名的小组中的update事件
 ```
 ### 前端(client)
-```javascript
+```jsx
 socket.emit('login',user.id); //前端用户成功登录时，触发服务端定义好的login事件，从而完成分组
 
 socket.emit('inform',user_id); //在用户更新信息，或需要告知被通信人更新数据时，触发服务端inform事件
@@ -89,7 +89,7 @@ socket.on('update',function (){ //定义用户端事件update，当服务端触�
 支持SSL(wss或https)
 ### 后端(server)
 SSL 要求workerman>=3.3.7 phpsocket.io>=1.1.1
-```
+```php
 $context = array(
     'ssl' => array(
     'local_cert'  => '/your/path/of/server.crt',
@@ -104,7 +104,7 @@ $io = new SocketIO(3120,$context);
 ```
 
 ### 前端(client)
-```javascript
+```jsx
 const socket = io('https://yourwebsite.com:3120',{transports: ['websocket']});
 //切换域名地址到你的网页，并设置transports模式为'websocket'
 ```
